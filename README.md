@@ -1,85 +1,215 @@
-# Veritas Legal Intelligence - Veritas للذكاء القانوني التحليلي
 
-Official Enterprise Legal Intelligence Platform. A modular monolith built for judicial-grade precision, security, and traceability.
+# 🌐 Veritas Legal Intelligence
 
----
-
-## 🌍 Language / اللغة
-
-[English](#english-guide) | [العربية](#دليل-التشغيل-باللغة-العربية)
+**Official Enterprise Legal Intelligence Platform**  
+A **modular monolith** designed for **judicial-grade precision, security, and traceability**, targeted at law firms and legal consultants.  
 
 ---
 
-## English Guide
-
-### 📋 Prerequisites
-To run the complete integrated system (Frontend + Backend + Database), ensure you have the following installed:
-1. **[Docker Desktop](https://www.docker.com/products/docker-desktop/)** (Essential for full integration).
-2. **[Node.js 18+](https://nodejs.org/)** (Optional, for local frontend dev).
-3. **[Python 3.9+](https://www.python.org/)** (Optional, for local backend dev).
-
-### 🚀 Quick Start (Complete System)
-The recommended way to run the entire stack is using **Docker Compose**. This automatically sets up the PostgreSQL database, the FastAPI backend, and the React frontend.
-
-1. **Clone/Open the Project Folder**: `c:\Users\muzanali\OneDrive\Desktop\leagalplus`
-2. **Launch Terminal** (PowerShell or Bash).
-3. **Execute the Build Command**:
-   ```powershell
-   docker-compose up --build
-   ```
-4. **Access the Platform**:
-   - **User Interface (Frontend)**: [http://localhost](http://localhost)
-   - **Backend API Docs**: [http://localhost:8000/docs](http://localhost:8000/docs)
-
-### 🏗️ Integrated Architecture (Version 2.0 - Enterprise)
-- **Modular Monolith**: Organized into domain-driven packages (`app/core`, `app/auth`, `app/cases`, `app/analysis`).
-- **Database**: PostgreSQL (Production-grade persistent storage with SSL support).
-- **Backend API (v1)**: FastAPI (Python) - Professional `/api/v1/` versioning.
-- **Enterprise Security**: Strict **Firm Isolation**, Zero-Trust **RBAC**, and Cryptographic **Audit Logs**.
-- **AI Engine (Async)**: High-performance asynchronous pipeline with structural job tracking and reasoning paths.
-- **Frontend**: Vite + React (TypeScript) - Judicial-grade redesign.
-- **Reporting**: Professional HTML dossier exporter for legal review.
-- **PWA**: Ready for offline access and mobile installation.
+## 📌 Table of Contents
+- [🌍 Language](#-language)
+- [📋 Prerequisites](#-prerequisites)
+- [🚀 Quick Start](#-quick-start-complete-integrated-system)
+- [🏗️ Architecture](#-integrated-architecture-enterprise-version-20)
+- [🧩 System Components](#-system-components)
+- [🧪 Verification](#-verification--testing)
+- [🔐 Configuration](#-configuration)
+- [📈 Features](#-features)
+- [🐳 Docker Deployment](#-docker-deployment)
+- [💡 Next Steps for Production](#-next-steps-for-production)
+- [📚 Conclusion](#-conclusion)
 
 ---
 
-## دليل التشغيل باللغة العربية
-
-### 🛠️ التحميلات والمتطلبات الأساسية
-لتشغيل النظام بالكامل كبيئة متكاملة، يجب توفر البرامج التالية:
-1. **[Docker Desktop](https://www.docker.com/products/docker-desktop/)**: (أساسي ومطلوب) لإدارة قاعدة البيانات والواجهات الخلفية والأمامية معاً.
-2. **[Node.js](https://nodejs.org/)**: (اختياري) إذا كنت ترغب في تشغيل الواجهة الأمامية بشكل منفصل للتطوير.
-3. **[Python 3.9+](https://www.python.org/)**: (اختياري) إذا كنت ترغب في تشغيل الخادم الخلفي بشكل منفصل.
-
-### 🚀 خطوات التشغيل (النظام المتكامل)
-أفضل طريقة لضمان عمل "قاعدة البيانات + الواجهة الخلفية + الواجهة الأمامية" كنظام واحد هي استخدام **Docker Compose**:
-
-1. **افتح مجلد المشروع**: `c:\Users\muzanali\OneDrive\Desktop\leagalplus`
-2. **افتح واجهة الأوامر (Terminal/PowerShell)** بموقع المشروع.
-3. **قم بتنفيذ أمر البناء والتشغيل**:
-   ```powershell
-   docker-compose up --build
-   ```
-4. **الوصول للنظام**:
-   - **واجهة المستخدم الرئيسية**: [http://localhost](http://localhost)
-   - **توثيق البرمجية الخلفية (API)**: [http://localhost:8000/docs](http://localhost:8000/docs)
-
-### 🧩 مكونات النظام
-*   **قاعدة البيانات**: PostgreSQL (مدارة تلقائياً بواسطة Docker).
-*   **الخادم الخلفي (Backend)**: FastAPI (يدير الذكاء الاصطناعي والتشفير والصلاحيات).
-*   **الواجهة الأمامية (Frontend)**: React (مصممة بمعايير قضائية احترافية).
-*   **تطبيق الويب التقدمي (PWA)**: يدعم العمل بدون إنترنت والتنصيب على أجهزة الموبايل.
+## 🌍 Language
+English only, fully documented.
 
 ---
 
-## 🧪 Verification / التحقق
-To verify the backend integrity / للتحقق من سلامة النظام الخلفي:
-```powershell
+## 📋 Prerequisites
+Ensure the following software is installed:
+
+- **Docker Desktop** (essential)  
+- **Node.js 18+** (optional, for frontend development)  
+- **Python 3.9+** (optional, for backend development)  
+
+---
+
+## 🚀 Quick Start (Complete Integrated System)
+> Recommended method: **Docker Compose**
+
+<details>
+<summary>Steps to Run the Full System</summary>
+
+1. Clone or open the project folder:
+
+```text
+c:\Users\muzanali\OneDrive\Desktop\leagalplus
+````
+
+2. Open Terminal (PowerShell or Git Bash) in project directory.
+
+3. Build and run all services:
+
+```bash
+docker-compose up --build
+```
+
+4. Access the platform:
+
+* **Frontend UI:** [http://localhost](http://localhost)
+* **Backend API Docs:** [http://localhost:8000/docs](http://localhost:8000/docs)
+
+</details>
+
+---
+
+## 🏗️ Integrated Architecture (Enterprise Version 2.0)
+
+<details>
+<summary>Click to expand architecture details</summary>
+
+**Backend:** FastAPI (Python) with `/api/v1/` versioning, handling authentication, AI, case logic, and RBAC.
+
+**Database:** PostgreSQL (production-grade, SSL-enabled, persistent).
+
+**Frontend:** React + TypeScript + Vite, PWA-ready for offline & mobile.
+
+**AI Engine:** Asynchronous pipeline with reasoning paths (XAI), OCR, entity extraction, risk evaluation.
+
+**Enterprise Security:**
+
+* Multi-Tenant Architecture (Full firm isolation)
+* Role-Based Access Control (RBAC)
+* Cryptographic Audit Logs
+
+**Reporting:** Professional HTML dossier export.
+
+</details>
+
+---
+
+## 🧩 System Components
+
+<details>
+<summary>Click to expand components</summary>
+
+| Component     | Description                                                |
+| ------------- | ---------------------------------------------------------- |
+| **Database**  | PostgreSQL, containerized, persistent storage, SSL-enabled |
+| **Backend**   | FastAPI, manages authentication, AI, cases, RBAC, audit    |
+| **Frontend**  | React + TypeScript, judicial-grade design                  |
+| **AI Engine** | Async jobs, evidence analysis, XAI reasoning paths         |
+| **PWA**       | Offline support, mobile installable, IndexedDB storage     |
+| **Reporting** | Export case dossiers in HTML                               |
+
+</details>
+
+---
+
+## 🧪 Verification / Testing
+
+<details>
+<summary>Click to see testing instructions</summary>
+
+Run backend tests to verify integrity:
+
+```bash
 cd backend
 python -m pytest tests/test_api.py -v
 ```
 
-## 🔐 Configuration / الإعدادات
-Variables are managed in `.env` files within the `backend/` and `frontend/` directories.
-يتم إدارة المتغيرات في ملفات `.env` داخل المجلدات المعنية.
-# Veritas-Legal
+</details>
+
+---
+
+## 🔐 Configuration
+
+<details>
+<summary>Click to expand configuration</summary>
+
+* Environment variables managed via `.env` files in `backend/` and `frontend/`.
+* Configure: database connection, JWT secrets, Firebase credentials, AI model paths.
+
+</details>
+
+---
+
+## 📈 Features
+
+<details>
+<summary>Click to expand features</summary>
+
+**For Law Firms:**
+
+* Centralized case management
+* AI-powered evidence analysis
+* Secure multi-tenant environment
+* RBAC and audit logging
+* Billing and task management
+* Offline PWA support
+
+**For Developers:**
+
+* Modular Monolith architecture
+* Domain-Driven Design
+* Testable and maintainable code
+* Clear documentation
+* Horizontal scalability
+
+</details>
+
+---
+
+## 🐳 Docker Deployment
+
+<details>
+<summary>Click to see deployment instructions</summary>
+
+**Services (docker-compose.yml):**
+
+* `db` → PostgreSQL
+* `backend` → FastAPI
+* `frontend` → React + Nginx
+
+**Features:**
+
+* Multi-stage builds for smaller images
+* Health checks
+* Auto restart
+* Persistent volumes
+* Integrated logging & monitoring
+
+Run system:
+
+```bash
+docker-compose up --build
+```
+
+</details>
+
+---
+
+## 💡 Next Steps for Production
+
+* Stripe integration (subscription billing)
+* Custom domains (e.g., firm1.veritas.com)
+* Email notifications via SendGrid/Mailgun
+* Cloud deployment: AWS, Azure, Railway
+* SSL certificates (Let's Encrypt)
+* Monitoring with Sentry / Prometheus
+* Automated database backups
+
+---
+
+## 📚 Conclusion
+
+**Veritas Legal Intelligence** is a **production-ready SaaS platform** that combines:
+
+* Enterprise-grade **security & auditing**
+* AI-powered **evidence analysis**
+* Multi-Tenant architecture
+* Modular, testable, scalable code
+* Modern stack: FastAPI + React + TypeScript + PostgreSQL + Docker
+
+Ready for **real-world law firms and enterprise deployment**.
