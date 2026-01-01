@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+sqlalchemy
+pydantic[email]
+python-jose[cryptography]
+passlib[bcrypt]
+bcrypt==3.2.0
+firebase-admin
+python-multipart
+python-dotenv
+psycopg2-binary
+pytest
+httpx
